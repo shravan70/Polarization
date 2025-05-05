@@ -19,6 +19,6 @@ AF = AF / np.max(AF)  # Normalize
 plt.figure(figsize=(6, 6))
 plt.polar(theta, AF)
 plt.title("Beamforming Pattern (Uniform Linear Array)", pad=20)
-plt.savefig("plots/beamforming_pattern.png")
+plt.savefig("plots/shravan_beamforming_pattern.png")
 plt.show()
 plt.close()
