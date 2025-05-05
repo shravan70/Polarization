@@ -1,103 +1,28 @@
-# Polarization Simulation Project
+# Polarization Simulation Project - Bixbi
 
-Welcome! In this project, you’ll explore **light polarization** through code-based visualizations and data analysis. This guide will walk you through how to **fork**, **clone**, and **run** the project on your own system using **Visual Studio Code**.
+An antenna radiation pattern is representation of the strength of the signal and to study the strength of emmitted signals from the antenna and the reciever for the better communications.
 
----
+# dipole.py
 
-#Getting Started
+The dipole antenna is the simplest & most widely used antenna. A dipole antenna has two metal rods with AC applied at the center, making electrons oscillate and emit electromagnetic waves. The radiation is strongest sideways (like a donut shape) and weakest along the wire. Its pattern in 2D looks like a figure-eight due to the formula **𝑈(𝜃)∝∣sin⁡(𝜃)**.
 
-To begin working with this project, follow these steps to set up everything on your computer.
+# Run dipole.py
 
+1. python code_path/dipole.py
 
+# 3D_dipole.py
 
-#Fork This Repository
+A 3D radiation pattern shows how an antenna spreads energy in all directions — like a glowing shape around it. Unlike 2D plots, it covers both elevation (θ) and azimuth (ϕ) angles, helping visualize real-world coverage. For a dipole, the signal is strongest at θ = 90° (sideways) and zero along the axis (θ = 0° or 180°), following the formula 𝑟(𝜃,𝜙)=∣sin(𝜃)|.
 
-First, you need your own copy of this project on GitHub:
+# Run 3D_dipole
 
-1. Click the **Fork** button at the top right of this page.
-2. This creates a copy of the repository in **your own GitHub account**.
+1. python code_path/3D_dipole.py
 
+# beamforming.py
 
+Beamforming uses multiple antennas to focus the signal in one direction instead of spreading it everywhere — like pointing a beam of wireless energy. By adjusting phase shifts between antennas, the signals add up in the desired direction and cancel out elsewhere, forming a strong, steerable beam. The beam direction depends on the phase shift
+β, and it's strongest at 𝜃=90° when β=0.
 
-# Clone Your Repository Locally
+# Run 3D_dipole
 
-Now that you have your own version, you’ll bring it to your computer:
-
-1. Go to your **forked repository** on GitHub.
-2. Click the green **Code** button and copy the HTTPS URL.
-3. Open **Visual Studio Code**.
-4. Open the command palette (`Ctrl+Shift+P` or `Cmd+Shift+P` on Mac).
-5. Type and select **“Git: Clone”**.
-6. Paste the URL and select a local folder to save the project.
-
-Alternatively, you can clone it from the terminal:
-
-```sh
-git clone https://github.com/YOUR-USERNAME/Polarization.git
-cd Polarization
-```
-
-
-
-# Install Required Libraries
-
-Before running the code, make sure your Python environment has all the necessary packages:
-
-```sh
-pip install -r requirements.txt
-```
-
-If there is no `requirements.txt`, you might install these commonly used ones:
-
-```sh
-pip install matplotlib numpy
-```
-
-
-# Run the Polarization Tool
-
-To visualize and analyze polarization patterns:
-
-```sh
-python combined.py
-```
-
-If your project contains multiple files or folders, check the script or instructions inside the `README` or relevant subfolder.
-
----
-
-# Experiment Freely
-
-You're encouraged to explore and modify the code to deepen your understanding of polarization!
-
-- **Make changes only in your local or forked repository.**
-- To save your progress:
-
-```sh
-git add .
-git commit -m "Experimented with polarization angle"
-git push origin main
-```
-
-# Troubleshooting
-
-- **Matplotlib Warning?**
-  If you see:  
-  `UserWarning: This figure includes Axes that are not compatible with tight_layout...`  
-  It's safe to ignore, or consider using `constrained_layout=True` in your plot setup.
-
-- **Missing Packages?**
-  Install any missing packages individually:
-  ```sh
-  pip install package-name
-  ```
-
-
-
-#Submitting Your Work
-
-When you're ready to share your work:
-
-1. Push your final changes to your **forked repository**.
-2. Share the **link to your fork** with your instructor or teammates.
-
+1. python code_path/beamforming.py
